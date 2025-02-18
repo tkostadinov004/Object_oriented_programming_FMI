@@ -61,7 +61,7 @@ int main()
 {
 	constexpr size_t SIZE = 10;
 	{
-    // Sorting in ascending order
+    		// Sorting in ascending order
 		int arr[SIZE] = { 5,1,0,-2,4,1,6,3,9,7 };
 
 		selectionSort(arr, SIZE, ascendingComparator); // ptr to function
@@ -72,7 +72,7 @@ int main()
 		printArr(arr, SIZE);
 	}
 	{
-    // Sorting in descending order
+    		// Sorting in descending order
 		int arr[SIZE] = { 5,1,0,-2,4,1,6,3,9,7 };
 
 		selectionSort(arr, SIZE, descendingComparator); // ptr to function
@@ -83,7 +83,7 @@ int main()
 		printArr(arr, SIZE);
 	}
 	{
-    // Reordering the array in a way such that all even numbers come before all odd numbers
+    		// Reordering the array in a way such that all even numbers come before all odd numbers
 		int arr[SIZE] = { 5,1,0,-2,4,1,6,3,9,7 };
 
 		selectionSort(arr, SIZE, evensBeforeOddsComparator); // ptr to function
