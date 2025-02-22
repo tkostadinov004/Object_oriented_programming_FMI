@@ -181,7 +181,7 @@ bool pred(int a)
 
 int main()
 {
-    int* result = filter(..., pred);
+    filter(..., pred);
 }
 ```
 Вход:
