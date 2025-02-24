@@ -1,5 +1,18 @@
 ## Примери - теория
-**1.** Има ли грешки в следния код и ако да - какви?
+**1.** Какво ще изведе следния код?
+```c++
+enum class A : double
+{
+    Action,
+    Adventure
+};
+
+int main()
+{
+    std::cout << (double)A::Action + (double)A::Adventure;
+}
+```
+**2.** Има ли грешки в следния код и ако да - какви?
 ```c++
 #include <iostream>
 
