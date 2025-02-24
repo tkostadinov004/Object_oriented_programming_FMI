@@ -91,7 +91,7 @@ double getAverage(int x, int y)
 
 void printResult(double result)
 {
-   std::cout << "The average is << result;
+   std::cout << "The average is " << result;
 }
 
 int main()
