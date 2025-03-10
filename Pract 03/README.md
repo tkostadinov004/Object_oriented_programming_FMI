@@ -86,6 +86,33 @@ int main()
 	std::cout << buffer << std::endl;
 }
 ```
+**4.** Нека имаме текстов файл с име **thoreau.txt** и съдържание: 
+```
+The mass of men lead lives of quiet desperation.
+```
+Какъв ще бъде изходът от следния код?
+```c++
+#include <iostream>
+#include <fstream>
+
+int main()
+{
+	std::ifstream ifs("thoreau.txt");
+	char symbol;
+	ifs.seekg(5, std::ios::beg);
+	symbol = ifs.get();
+	std::cout << symbol << std::endl;
+	ifs.seekg(-4, std::ios::cur);
+	symbol = ifs.get();
+	std::cout << symbol << std::endl;
+	ifs.seekg(-2, std::ios::end);
+	symbol = ifs.get();
+	std::cout << symbol << std::endl;
+	ifs.seekg(-1, std::ios::cur);
+	symbol = ifs.get();
+	std::cout << symbol << std::endl;
+}
+```
 ## Задачи
 **1.** Напишете функция, която приема име на текстов файл и принтира на стандартния изход съдържанието му. </br></br>
 **2.** Напишете функция, която приема име на текстов файл и принтира броя на редовете в него. </br></br>
