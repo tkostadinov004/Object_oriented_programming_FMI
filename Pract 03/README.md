@@ -7,7 +7,7 @@ struct A
 	int occupiedSpace;
 };
 ```
-**2.** Колко е размерът на следните структури при стандартен компилатор?
+**2.** Колко е размерът на следните структури при стандартен компилатор и 64-битова архитектура?
 ```c++
 struct A
 {
@@ -18,16 +18,10 @@ struct A
 struct B
 {
 	char word[5];
-	int32_t occupiedSpace;
+	double occupiedSpace;
 };
 
 struct C
-{
-	char word[5];
-	int64_t occupiedSpace;
-};
-
-struct D
 {
 	int length;
 	char word[5];
