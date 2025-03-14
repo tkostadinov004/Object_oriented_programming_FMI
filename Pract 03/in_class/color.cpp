@@ -1,15 +1,6 @@
 #include "color.h"
 #include "functions.h"
 
-constexpr char COLOR_DELIMITER = '|';
-
-struct Color
-{
-    unsigned R:8;
-    unsigned G:8;
-    unsigned B:8;
-};
-
 size_t getColorCount(std::ifstream& ifs)
 {
     if (!ifs.is_open())
