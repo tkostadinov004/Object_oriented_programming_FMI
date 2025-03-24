@@ -11,6 +11,7 @@ Session readSession(std::ifstream& ifs)
     ifs.read((char*)&session, sizeof(session));
     return session;
 }
+
 Session* readSessions(std::ifstream& ifs, size_t size)
 {
     Session* sessions = new Session[size];
