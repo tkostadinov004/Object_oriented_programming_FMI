@@ -5,20 +5,10 @@ void initSession(Session& session)
     session.uid = session.start = session.end = 0;
 }
 
-Session readSession(std::ifstream& ifs)
-{
-    Session session;
-    ifs.read((char*)&session, sizeof(session));
-    return session;
-}
-
 Session* readSessions(std::ifstream& ifs, size_t size)
 {
     Session* sessions = new Session[size];
-    for (size_t i = 0; i < size; i++)
-    {
-        sessions[i] = readSession(ifs); // could also be done by ifs.read((char*)&sessions[i], sizeof(sessions[i]);
-    }
+    ifs.read((char*)sessions, sizeof(size * Session);
     return sessions;
 }
 
