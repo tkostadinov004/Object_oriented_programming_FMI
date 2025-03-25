@@ -8,7 +8,7 @@ void initSession(Session& session)
 Session* readSessions(std::ifstream& ifs, size_t size)
 {
     Session* sessions = new Session[size];
-    ifs.read((char*)sessions, size * sizeof(Session);
+    ifs.read((char*)sessions, size * sizeof(Session));
     return sessions;
 }
 
