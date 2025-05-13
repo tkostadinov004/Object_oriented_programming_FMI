@@ -1,5 +1,4 @@
 # Тема 10: Наследяване. 
-https://github.com/tkostadinov004/Object_oriented_programming_FMI/tree/main/Pract%2010
 ## Задача 1
 
 Реализирайте банкова система, която включва няколко вида акаунти: 
