@@ -38,8 +38,8 @@ void RegularFile::swap(RegularFile& other)
 RegularFile::RegularFile(const char* name, size_t filesize, unsigned attributes, const char* extension)
     : FileObject(name, filesize, attributes)
 {
-    setFullName(name, extension);
     setExtension(extension);
+    setFullName(name, extension);
 }
 
 RegularFile::RegularFile(const RegularFile& other) : FileObject(other)
