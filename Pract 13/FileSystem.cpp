@@ -111,9 +111,17 @@ void FileSystem::printArchiveable(const char* dest) const
 	if (!ofs.is_open()) throw std::logic_error("File stream not open!");
 
 	char* currentDir = new char[1] {0};
-	append(currentDir, root->getName());
-	printArchiveable(ofs, root, currentDir);
+	try
+	{
+		append(currentDir, root->getName());
+		printArchiveable(ofs, root, currentDir);
+	}
+	catch (const std::exception& e)
+	{
+		delete[] currentDir;
+		ofs.close();
+		throw e;
+	}
 	delete[] currentDir;
-
 	ofs.close();
 }
