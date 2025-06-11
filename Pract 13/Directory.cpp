@@ -56,6 +56,7 @@ Directory& Directory::operator=(const Directory& other)
 	if (this != &other)
 	{
 		Directory temp(other);
+		FileObject::operator=(other);
 		swap(temp);
 	}
 	return *this;
