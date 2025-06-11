@@ -50,13 +50,16 @@ public:
 
 int main()
 {
-	int** nums = new int*[25];
-	fillFib(25, nums);
+	size_t n;
+	std::cin >> n;
+
+	int** nums = new int*[n];
+	fillFib(n, nums);
 
 	DataSource<int>* arr[3];
 	arr[0] = new FileDataSource<int>("bin.dat");
 	arr[1] = new GeneratorDataSource<int, Rand>();
-	arr[2] = new ArrayDataSource<int>(const_cast<const int**>(nums), (size_t)25);
+	arr[2] = new ArrayDataSource<int>(nums, n);
 
 	AlternateDataSource<int> ds(arr, 3);
 
