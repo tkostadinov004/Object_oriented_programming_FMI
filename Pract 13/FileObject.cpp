@@ -62,7 +62,7 @@ const char* FileObject::getName() const
 
 bool FileObject::is(Attribute attr) const
 {
-    return attributes & (unsigned)attr;
+    return attributes & (unsigned char)attr;
 }
 
 size_t FileObject::getSize() const
@@ -82,7 +82,7 @@ void FileObject::setSize(size_t filesize)
 
 void FileObject::setAttribute(Attribute attr)
 {
-    attributes |= (unsigned)attr;
+    attributes |= (unsigned char)attr;
 }
 
 void FileObject::print() const
