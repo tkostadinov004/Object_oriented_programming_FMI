@@ -19,7 +19,7 @@ class FileObject
 {
 	char* name = nullptr;
 	size_t filesize;
-	unsigned attributes;
+	unsigned char attributes;
 	const Directory* dir = nullptr;
 protected:
 	void printBasicData() const;
