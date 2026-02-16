@@ -1,7 +1,0 @@
-usr/Solution.cpp
-usr/Iron Maiden - The Number of the Beast.mp3
-usr/OS_HW.sh
-usr/exercises
-usr/exercises/c/OOP_PRACT.cpp
-usr/exercises/c/Shell_Test.sh
-usr/exercises/c/NotSoImportantContract.pdf
