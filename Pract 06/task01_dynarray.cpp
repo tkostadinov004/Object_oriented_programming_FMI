@@ -338,9 +338,9 @@ public:
 	BookPair& operator[](int index) { return books[index]; }
 	const BookPair& operator[](int index) const { return books[index]; }
 
-	void add_user(const User& user);
+	bool add_user(const User& user);
 
-	void add_book(const Book& book);
+	bool add_book(const Book& book);
 	bool take_book(unsigned book_id, const char* username);
 	bool return_book(unsigned book_id);
 };
@@ -367,14 +367,24 @@ const User* Library::find_by_username(const char* username) const
 	return nullptr;
 }
 
-void Library::add_user(const User& user)
+bool Library::add_user(const User& user)
 {
+	if (find_by_username(user.get_username())) {
+		return false;
+	}
+
 	users.add(user);
+	return true;
 }
 
-void Library::add_book(const Book& book)
+bool Library::add_book(const Book& book)
 {
+	if (find_by_id(book.get_id())) {
+		return false;
+	}
+
 	books.add(BookPair{ book, nullptr });
+	return true;
 }
 
 bool Library::take_book(unsigned book_id, const char* username)
@@ -439,8 +449,10 @@ int main() {
 
 	Library library;
 	library.add_book(books[0]);
+	library.add_book(books[0]);
 	library.add_book(books[1]);
 
+	library.add_user(users[0]);
 	library.add_user(users[0]);
 	library.add_user(users[1]);
 
