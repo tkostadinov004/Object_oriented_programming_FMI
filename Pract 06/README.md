@@ -38,6 +38,11 @@
 **Пример:** 
 ```c++ 
 Pipeline<int> p; 
-p.pipe([](int x){return x+1;}).pipe([](int x){return x*3;}); 
-cout << p(4); //-->15
+p.pipe([](int x){
+    return x+1;
+}).pipe([](int x){
+    return x*3;
+}); 
+
+std::cout << p(4); //-->15
 ```
